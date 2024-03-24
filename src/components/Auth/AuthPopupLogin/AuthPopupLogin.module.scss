@@ -1,0 +1,85 @@
+.wrapperAuthPopupLogin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  &__title {
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__formWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    &__itemInput {
+
+      &__email {
+        input {
+          height: 45px;
+        }
+      }
+
+      &__password {
+        & > span {
+          text-align: center;
+          height: 40px;
+          background: rgb(188, 195, 208);
+        }
+
+        input {
+          height: 40px;
+        }
+      }
+    }
+
+  }
+
+  &__resetPassword {
+    display: inline-block;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #000000;
+    line-height: 20px;
+    margin: 25px 0 25px 0;
+  }
+
+  &__buttonLogin {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+
+    background-color: #FF0032;
+    border-color: unset;
+    color: #FFFFFF;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #FF0032 !important;
+    }
+
+    &:disabled {
+      background-color: rgba(188, 195, 208, 0.5);
+      color: #626C77;
+    }
+  }
+
+  &__createAccount {
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #626C77;
+    line-height: 20px;
+  }
+
+}

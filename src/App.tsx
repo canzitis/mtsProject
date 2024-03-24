@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @ts-ignore
+import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
+import AuthPopupSetNewPassword from "./components/Auth/AuthPopupSetNewPassword/AuthPopupSetNewPassword";
+import AuthPopupLogin from './components/Auth/AuthPopupLogin/AuthPopupLogin';
+import AuthPopupPasswordRecovery from './components/Auth/AuthPopupPasswordRecovery/AuthPopupPasswordRecovery';
+import AuthPopupRegistration from "./components/Auth/AuthPopupRegistration/AuthPopupRegistration";
 
 function App() {
+  // @ts-ignore
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="*" element={<Navigate to="/login"/>}/>
+        <Route path="/login" element={<AuthPopupLogin/>}/>
+        <Route path="/recover-password" element={<AuthPopupPasswordRecovery/>}/>
+        <Route path="/new-password" element={<AuthPopupSetNewPassword/>}/>
+        <Route path="/register" element={<AuthPopupRegistration/>}/>
+      </Routes>
+    </Router>
+
   );
 }
 
