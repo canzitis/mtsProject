@@ -1,0 +1,33 @@
+body {
+  font-family: "Fira Code Light";
+  font-weight: 400;
+  background-color: #F8F9FB;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  max-width: 1535px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.overflow-hidden {
+  overflow-y: hidden;
+  padding-right: 8px;
+}
+
+.btn {
+  background-color: unset;
+  border: none;
+}
